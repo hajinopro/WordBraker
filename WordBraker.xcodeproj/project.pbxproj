@@ -7,18 +7,38 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7A33F5AA2954728D00FA3E96 /* AddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A33F5A92954728D00FA3E96 /* AddView.swift */; };
+		7A33F5AF29547A7400FA3E96 /* TutorialPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A33F5AD29547A7400FA3E96 /* TutorialPage.swift */; };
+		7A33F5B029547A7400FA3E96 /* TutorialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A33F5AE29547A7400FA3E96 /* TutorialView.swift */; };
+		7A45DAC82953293C00A60532 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A45DAC72953293C00A60532 /* DetailView.swift */; };
+		7ABF0E082955AB5500B66BA4 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ABF0E072955AB5500B66BA4 /* MainView.swift */; };
+		7ABF0E0A2955AB6C00B66BA4 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ABF0E092955AB6C00B66BA4 /* SettingsView.swift */; };
+		7ABF0E0C2955ABF100B66BA4 /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ABF0E0B2955ABF100B66BA4 /* AboutView.swift */; };
+		7ABF0E0F2955AE6200B66BA4 /* SafariView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ABF0E0D2955AE6200B66BA4 /* SafariView.swift */; };
+		7ABF0E122955E05300B66BA4 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ABF0E112955E05300B66BA4 /* Settings.swift */; };
 		7ADB9BF92951DFB90013E453 /* WordBrakerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ADB9BF82951DFB90013E453 /* WordBrakerApp.swift */; };
 		7ADB9BFB2951DFB90013E453 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ADB9BFA2951DFB90013E453 /* ContentView.swift */; };
 		7ADB9BFD2951DFB90013E453 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7ADB9BFC2951DFB90013E453 /* Assets.xcassets */; };
 		7ADB9C002951DFB90013E453 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7ADB9BFF2951DFB90013E453 /* Preview Assets.xcassets */; };
+		7ADB9C132951E23D0013E453 /* Word.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ADB9C122951E23D0013E453 /* Word.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7A33F5A92954728D00FA3E96 /* AddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddView.swift; sourceTree = "<group>"; };
+		7A33F5AD29547A7400FA3E96 /* TutorialPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialPage.swift; sourceTree = "<group>"; };
+		7A33F5AE29547A7400FA3E96 /* TutorialView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialView.swift; sourceTree = "<group>"; };
+		7A45DAC72953293C00A60532 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		7ABF0E072955AB5500B66BA4 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		7ABF0E092955AB6C00B66BA4 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		7ABF0E0B2955ABF100B66BA4 /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
+		7ABF0E0D2955AE6200B66BA4 /* SafariView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SafariView.swift; sourceTree = "<group>"; };
+		7ABF0E112955E05300B66BA4 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		7ADB9BF52951DFB90013E453 /* WordBraker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WordBraker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7ADB9BF82951DFB90013E453 /* WordBrakerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordBrakerApp.swift; sourceTree = "<group>"; };
 		7ADB9BFA2951DFB90013E453 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		7ADB9BFC2951DFB90013E453 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7ADB9BFF2951DFB90013E453 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		7ADB9C122951E23D0013E453 /* Word.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Word.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +72,17 @@
 			isa = PBXGroup;
 			children = (
 				7ADB9BF82951DFB90013E453 /* WordBrakerApp.swift */,
+				7ABF0E072955AB5500B66BA4 /* MainView.swift */,
 				7ADB9BFA2951DFB90013E453 /* ContentView.swift */,
+				7A45DAC72953293C00A60532 /* DetailView.swift */,
+				7A33F5A92954728D00FA3E96 /* AddView.swift */,
+				7ABF0E092955AB6C00B66BA4 /* SettingsView.swift */,
+				7ABF0E0B2955ABF100B66BA4 /* AboutView.swift */,
+				7A33F5AD29547A7400FA3E96 /* TutorialPage.swift */,
+				7A33F5AE29547A7400FA3E96 /* TutorialView.swift */,
+				7ADB9C122951E23D0013E453 /* Word.swift */,
+				7ABF0E0D2955AE6200B66BA4 /* SafariView.swift */,
+				7ABF0E112955E05300B66BA4 /* Settings.swift */,
 				7ADB9BFC2951DFB90013E453 /* Assets.xcassets */,
 				7ADB9BFE2951DFB90013E453 /* Preview Content */,
 			);
@@ -138,7 +168,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				7ADB9BFB2951DFB90013E453 /* ContentView.swift in Sources */,
+				7ABF0E0F2955AE6200B66BA4 /* SafariView.swift in Sources */,
+				7ABF0E082955AB5500B66BA4 /* MainView.swift in Sources */,
+				7A45DAC82953293C00A60532 /* DetailView.swift in Sources */,
+				7ABF0E0A2955AB6C00B66BA4 /* SettingsView.swift in Sources */,
+				7ABF0E0C2955ABF100B66BA4 /* AboutView.swift in Sources */,
+				7ABF0E122955E05300B66BA4 /* Settings.swift in Sources */,
 				7ADB9BF92951DFB90013E453 /* WordBrakerApp.swift in Sources */,
+				7ADB9C132951E23D0013E453 /* Word.swift in Sources */,
+				7A33F5B029547A7400FA3E96 /* TutorialView.swift in Sources */,
+				7A33F5AA2954728D00FA3E96 /* AddView.swift in Sources */,
+				7A33F5AF29547A7400FA3E96 /* TutorialPage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
