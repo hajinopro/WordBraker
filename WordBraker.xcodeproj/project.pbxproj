@@ -21,6 +21,8 @@
 		7ADB9BFD2951DFB90013E453 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7ADB9BFC2951DFB90013E453 /* Assets.xcassets */; };
 		7ADB9C002951DFB90013E453 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7ADB9BFF2951DFB90013E453 /* Preview Assets.xcassets */; };
 		7ADB9C132951E23D0013E453 /* Word.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ADB9C122951E23D0013E453 /* Word.swift */; };
+		7ADE32F42956C7DA0008CDFC /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ADE32F32956C7DA0008CDFC /* TestView.swift */; };
+		7ADE32F62956CA9C0008CDFC /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ADE32F52956CA9C0008CDFC /* Notification.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +41,8 @@
 		7ADB9BFC2951DFB90013E453 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7ADB9BFF2951DFB90013E453 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		7ADB9C122951E23D0013E453 /* Word.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Word.swift; sourceTree = "<group>"; };
+		7ADE32F32956C7DA0008CDFC /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
+		7ADE32F52956CA9C0008CDFC /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +56,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7A46A653295734DE00B216F6 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				7ABF0E072955AB5500B66BA4 /* MainView.swift */,
+				7ADB9BFA2951DFB90013E453 /* ContentView.swift */,
+				7A45DAC72953293C00A60532 /* DetailView.swift */,
+				7A33F5A92954728D00FA3E96 /* AddView.swift */,
+				7ADE32F32956C7DA0008CDFC /* TestView.swift */,
+				7ABF0E092955AB6C00B66BA4 /* SettingsView.swift */,
+				7ABF0E0B2955ABF100B66BA4 /* AboutView.swift */,
+				7A33F5AD29547A7400FA3E96 /* TutorialPage.swift */,
+				7A33F5AE29547A7400FA3E96 /* TutorialView.swift */,
+				7ABF0E0D2955AE6200B66BA4 /* SafariView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		7A46A6542957352300B216F6 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				7ABF0E112955E05300B66BA4 /* Settings.swift */,
+				7ADE32F52956CA9C0008CDFC /* Notification.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		7A46A6552957353500B216F6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				7ADB9C122951E23D0013E453 /* Word.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		7ADB9BEC2951DFB90013E453 = {
 			isa = PBXGroup;
 			children = (
@@ -72,17 +110,9 @@
 			isa = PBXGroup;
 			children = (
 				7ADB9BF82951DFB90013E453 /* WordBrakerApp.swift */,
-				7ABF0E072955AB5500B66BA4 /* MainView.swift */,
-				7ADB9BFA2951DFB90013E453 /* ContentView.swift */,
-				7A45DAC72953293C00A60532 /* DetailView.swift */,
-				7A33F5A92954728D00FA3E96 /* AddView.swift */,
-				7ABF0E092955AB6C00B66BA4 /* SettingsView.swift */,
-				7ABF0E0B2955ABF100B66BA4 /* AboutView.swift */,
-				7A33F5AD29547A7400FA3E96 /* TutorialPage.swift */,
-				7A33F5AE29547A7400FA3E96 /* TutorialView.swift */,
-				7ADB9C122951E23D0013E453 /* Word.swift */,
-				7ABF0E0D2955AE6200B66BA4 /* SafariView.swift */,
-				7ABF0E112955E05300B66BA4 /* Settings.swift */,
+				7A46A653295734DE00B216F6 /* Views */,
+				7A46A6552957353500B216F6 /* Models */,
+				7A46A6542957352300B216F6 /* Settings */,
 				7ADB9BFC2951DFB90013E453 /* Assets.xcassets */,
 				7ADB9BFE2951DFB90013E453 /* Preview Content */,
 			);
@@ -177,7 +207,9 @@
 				7ADB9BF92951DFB90013E453 /* WordBrakerApp.swift in Sources */,
 				7ADB9C132951E23D0013E453 /* Word.swift in Sources */,
 				7A33F5B029547A7400FA3E96 /* TutorialView.swift in Sources */,
+				7ADE32F62956CA9C0008CDFC /* Notification.swift in Sources */,
 				7A33F5AA2954728D00FA3E96 /* AddView.swift in Sources */,
+				7ADE32F42956C7DA0008CDFC /* TestView.swift in Sources */,
 				7A33F5AF29547A7400FA3E96 /* TutorialPage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

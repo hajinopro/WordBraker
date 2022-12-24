@@ -16,24 +16,23 @@ struct ContentView: View {
     @AppStorage("hasViewedWalkthrough") var hasViewedWalkthrough = false
     
     enum FilterType: String, CaseIterable, Identifiable {
-        case alphbet, time
+        case timeline, alphabetical
         var id: Self {
             self
         }
     }
     
-    @State private var filterType: FilterType = .alphbet
+    @State private var filterType: FilterType = .timeline
     
     var searchResults: [Word] {
         if searchText.isEmpty {
-            if filterType == .alphbet {
+            if filterType == .alphabetical {
                 return wordStore.words.sorted()
             } else {
                 return wordStore.words
             }
-            
         } else {
-            if filterType == .alphbet {
+            if filterType == .alphabetical {
                 return wordStore.words.filter { $0.question.localizedCaseInsensitiveContains(searchText) }.sorted()
             } else {
                 return wordStore.words.filter { $0.question.localizedCaseInsensitiveContains(searchText) }
@@ -45,7 +44,7 @@ struct ContentView: View {
         NavigationStack {
             Picker("Filter Option", selection: $filterType) {
                 ForEach(FilterType.allCases) { type in
-                    Text("\(type.rawValue)")
+                    Text("\(type.rawValue.capitalized)")
                         .tag(type)
                 }
             }
@@ -58,12 +57,32 @@ struct ContentView: View {
                         NavigationLink {
                             DetailView(word: word)
                         } label: {
-                            VStack(alignment: .leading) {
-                                Text(word.question)
-                                    .font(.headline)
-                                Text(word.insertDate, style: .date)
-                                    .foregroundColor(.secondary)
-                                    .font(.caption)
+                            HStack(spacing: 0) {
+                                ForEach(1..<4, id: \.self) { index in
+                                    if (word.rating - index + 1) > 0 {
+                                        Image(systemName: "star.fill")
+                                            .font(.headline)
+                                            .foregroundColor(.red)
+                                    } else {
+                                        Image(systemName: "star")
+                                            .font(.headline)
+                                            .foregroundColor(.red)
+                                    }
+                                }
+                                Spacer().frame(width: 10)
+                                VStack(alignment: .leading) {
+                                    Text(word.question)
+                                        .font(.headline)
+                                    Text(word.insertDate, style: .date)
+                                        .foregroundColor(.secondary)
+                                        .font(.caption)
+                                }
+                                Spacer()
+                                Image(systemName: word.favorite ? "heart.fill" : "heart")
+                                    .foregroundColor(word.favorite ? .orange : .secondary)
+                                Spacer().frame(width: 10)
+                                Image(systemName: word.isMemorized ? "checkmark.circle.fill" : "xmark.circle")
+                                    .foregroundColor(word.isMemorized ? .primary : .secondary)
                             }
                         }
                     }
@@ -84,7 +103,7 @@ struct ContentView: View {
                 }
             }
             .searchable(text: $searchText, prompt: "Looking for something")
-            .sheet(isPresented: $showInsertView) {
+            .fullScreenCover(isPresented: $showInsertView) {
                 AddView()
             }
             .onAppear {
@@ -94,10 +113,24 @@ struct ContentView: View {
                 TutorialView()
             }
         }
+        .task {
+            prepareNotification()
+        }
+    }
+    
+    func prepareNotification() {
+        guard wordStore.words.count > 0 else { return }
+        let randomNumber = Int.random(in: 0..<wordStore.words.count)
+        let suggestedWord = wordStore.words[randomNumber]
+        Notification.notificationRequest(suggestedWord)
     }
     
     func removeRows(at indexSet: IndexSet) {
-        wordStore.words.remove(atOffsets: indexSet)
+        for index in indexSet {
+            if let firstIndex = wordStore.words.firstIndex(where: { $0.id == searchResults[index].id }) {
+                wordStore.words.remove(at: firstIndex)
+            }
+        }
     }
 }
 

@@ -15,6 +15,9 @@ struct WordBrakerApp: App {
         WindowGroup {
             MainView()
                 .environmentObject(wordStore)
+                .onAppear {
+                    Notification.notificationAuthorization()
+                }
         }
     }
 }

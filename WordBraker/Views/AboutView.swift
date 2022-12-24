@@ -21,6 +21,7 @@ struct AboutView: View {
     }
 
     @State private var safari: WebLink?
+    @State private var showTutorial = false
     
     var body: some View {
         NavigationStack {
@@ -42,6 +43,16 @@ struct AboutView: View {
                         .onTapGesture {
                             safari = .feedback
                         }
+                    
+                    Button {
+                        showTutorial.toggle()
+                    } label: {
+                        Label("Tutorial View", systemImage: "graduationcap.circle.fill")
+                            .foregroundColor(.primary)
+                    }
+                }
+                .sheet(isPresented: $showTutorial) {
+                    TutorialView()
                 }
                 
                 Section {

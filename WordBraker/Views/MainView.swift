@@ -18,9 +18,9 @@ struct MainView: View {
                 }
                 .tag(0)
             
-            TutorialView()
+            Text("TestView")
                 .tabItem {
-                    Label("Tutorials", systemImage: "graduationcap.fill")
+                    Label("Tests", systemImage: "graduationcap.fill")
                 }
                 .tag(1)
             
